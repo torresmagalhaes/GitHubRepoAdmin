@@ -40,9 +40,8 @@ if (!app.Environment.IsDevelopment())
 
 app.UseMiddleware(typeof(GlobalExceptionHandling));
 
-app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseSpaStaticFiles(); // serve arquivos do build do Angular em produção
+app.UseSpaStaticFiles(); 
 
 app.UseRouting();
 app.UseCors();
@@ -51,7 +50,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");
 
-// Config SPA (Angular)
+
 app.UseSpa(spa =>
 {
     spa.Options.SourcePath = "ClientApp";

@@ -23,7 +23,7 @@
         }
 
         // Other
-        public const string DefaultOwner = "klebeiro";
+        public const string DefaultOwner = "torresmagalhaes";
 
     }
 }

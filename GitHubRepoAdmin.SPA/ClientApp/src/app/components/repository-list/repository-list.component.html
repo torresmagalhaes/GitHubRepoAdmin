@@ -48,8 +48,8 @@
     <p *ngIf="!repositoryDetails.description">(Sem descrição)</p>
     <p class="language" *ngIf="repositoryDetails.language"><i class="bi bi-file-code"></i> {{ repositoryDetails.language }}</p>
     <div class="details-button-container">
-      <button class="details-button" *ngIf="repositoryDetails.owner.login === 'klebeiro' && selectedRepositoryIsFavorite == false" [disabled]="isDisabled" (click)="saveFavorite(repositoryDetails.id)">Adicionar favorito</button>
-      <button class="details-button" *ngIf="repositoryDetails.owner.login === 'klebeiro' && selectedRepositoryIsFavorite == true" [disabled]="isDisabled" (click)="deleteFavorite(repositoryDetails.id)">Remover favorito</button>
+      <button class="details-button" *ngIf="repositoryDetails.owner.login === 'torresmagalhaes' && selectedRepositoryIsFavorite == false" [disabled]="isDisabled" (click)="saveFavorite(repositoryDetails.id)">Adicionar favorito</button>
+      <button class="details-button" *ngIf="repositoryDetails.owner.login === 'torresmagalhaes' && selectedRepositoryIsFavorite == true" [disabled]="isDisabled" (click)="deleteFavorite(repositoryDetails.id)">Remover favorito</button>
       <a class="details-button" href="{{repositoryDetails.url}}" target=”_blank” attribute>
         Acessar repositório
       </a>
