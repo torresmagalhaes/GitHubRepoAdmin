@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaProxy" Version="6.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="6.0.25" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,9 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EvoHub.Business\GitHubRepoAdmin.Business.csproj" />
-    <ProjectReference Include="..\EvoHub.Domain\GitHubRepoAdmin.Domain.csproj" />
-    <ProjectReference Include="..\EvoHub.Infra\GitHubRepoAdmin.Infra.csproj" />
+    <ProjectReference Include="..\GitHubRepoAdmin.Business\GitHubRepoAdmin.Business.csproj" />
+    <ProjectReference Include="..\GitHubRepoAdmin.Domain\GitHubRepoAdmin.Domain.csproj" />
+    <ProjectReference Include="..\GitHubRepoAdmin.Infra\GitHubRepoAdmin.Infra.csproj" />
   </ItemGroup>
 
   <ItemGroup>

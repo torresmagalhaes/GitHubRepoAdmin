@@ -1,12 +1,12 @@
 ﻿{
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:5258",
-      "sslPort": 44306
-    }
-  },
+    "iisSettings": {
+        "windowsAuthentication": false,
+        "anonymousAuthentication": true,
+        "iisExpress": {
+            "applicationUrl": "http://localhost:5258",
+            "sslPort": 44306
+        }
+    },
     "profiles": {
         "GitHubRepoAdmin.SPA": {
             "commandName": "Project",

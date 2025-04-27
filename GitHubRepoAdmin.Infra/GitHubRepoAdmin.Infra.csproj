@@ -25,8 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EvoHub.Domain\GitHubRepoAdmin.Domain.csproj" />
-    <ProjectReference Include="..\EvoHub.Infra.CrossCutting\GitHubRepoAdmin.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\GitHubRepoAdmin.Domain\GitHubRepoAdmin.Domain.csproj" />
+    <ProjectReference Include="..\GitHubRepoAdmin.Infra.CrossCutting\GitHubRepoAdmin.Infra.CrossCutting.csproj" />
   </ItemGroup>
 
   <ItemGroup>
