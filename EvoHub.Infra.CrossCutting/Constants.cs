@@ -1,4 +1,4 @@
-﻿namespace EvoHub.Infra.CrossCutting
+﻿namespace GitHubRepoAdmin.Infra.CrossCutting
 {
     public static class Constants
     {

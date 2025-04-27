@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace EvoHub.Domain
+namespace GitHubRepoAdmin.Domain
 {
     public class License
     {

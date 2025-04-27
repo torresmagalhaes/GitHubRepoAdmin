@@ -1,19 +1,18 @@
-using EvoHub.Business.Contract;
-using EvoHub.Business.Services;
-using EvoHub.Domain.Interfaces;
-using EvoHub.Infra.ApiGitHub;
-using EvoHub.Infra.Contract;
-using EvoHub.Infra.Database;
-using EvoHub.Infra.Middlewares;
-using EvoHub.Infra.Repository;
+using GitHubRepoAdmin.Business.Contract;
+using GitHubRepoAdmin.Business.Services;
+using GitHubRepoAdmin.Domain.Interfaces;
+using GitHubRepoAdmin.Infra.ApiGitHub;
+using GitHubRepoAdmin.Infra.Contract;
+using GitHubRepoAdmin.Infra.Database;
+using GitHubRepoAdmin.Infra.Middlewares;
+using GitHubRepoAdmin.Infra.Repository;
 using Microsoft.EntityFrameworkCore;
-using RestSharp;
 
 var builder = WebApplication.CreateBuilder(args);
 
 IConfiguration configuration = builder.Configuration;
 builder.Services.AddControllersWithViews();
-builder.Services.AddSingleton<RestClient>();
+builder.Services.AddSingleton<HttpClient>();
 builder.Services.AddScoped<IGitHubApi, GitHubApi>();
 builder.Services.AddScoped<IGitHubApiBusiness, GitHubApiBusiness>();
 builder.Services.AddScoped<IFavoritesRepository, FavoritesRepository>();

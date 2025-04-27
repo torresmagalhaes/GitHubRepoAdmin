@@ -1,4 +1,4 @@
-﻿namespace EvoHub.Domain.Interfaces
+﻿namespace GitHubRepoAdmin.Domain.Interfaces
 {
     public interface IGitHubApi
     {

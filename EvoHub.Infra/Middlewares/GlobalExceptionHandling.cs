@@ -1,10 +1,10 @@
-﻿using EvoHub.Domain;
-using EvoHub.Infra.CrossCutting;
+﻿using GitHubRepoAdmin.Domain;
+using GitHubRepoAdmin.Infra.CrossCutting;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System.Net;
 
-namespace EvoHub.Infra.Middlewares
+namespace GitHubRepoAdmin.Infra.Middlewares
 {
     public class GlobalExceptionHandling
     {

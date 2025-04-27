@@ -30,11 +30,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EvoHub.Business\EvoHub.Business.csproj" />
-    <ProjectReference Include="..\EvoHub.Business\EvoHub.Business.csproj" />
-    <ProjectReference Include="..\EvoHub.Domain\EvoHub.Domain.csproj" />
-    <ProjectReference Include="..\EvoHub.Infra.CrossCutting\EvoHub.Infra.CrossCutting.csproj" />
-    <ProjectReference Include="..\EvoHub.Infra\EvoHub.Infra.csproj" />
+    <ProjectReference Include="..\EvoHub.Business\GitHubRepoAdmin.Business.csproj" />
+    <ProjectReference Include="..\EvoHub.Domain\GitHubRepoAdmin.Domain.csproj" />
+    <ProjectReference Include="..\EvoHub.Infra.CrossCutting\GitHubRepoAdmin.Infra.CrossCutting.csproj" />
+    <ProjectReference Include="..\EvoHub.Infra\GitHubRepoAdmin.Infra.csproj" />
   </ItemGroup>
 
 </Project>

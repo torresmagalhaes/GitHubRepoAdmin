@@ -1,6 +1,6 @@
-﻿using EvoHub.Domain;
+﻿using GitHubRepoAdmin.Domain;
 
-namespace EvoHub.Infra.Contract
+namespace GitHubRepoAdmin.Infra.Contract
 {
     public interface IFavoritesRepository
     {

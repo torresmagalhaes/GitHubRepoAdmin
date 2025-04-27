@@ -1,8 +1,8 @@
-﻿using EvoHub.Domain;
-using EvoHub.Domain.Interfaces;
+﻿using GitHubRepoAdmin.Domain;
+using GitHubRepoAdmin.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EvoHub.SPA.Controllers
+namespace GitHubRepoAdmin.SPA.Controllers
 {
     [ApiController]
     [Route("[controller]")]

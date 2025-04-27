@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using EvoHub.Business.Contract;
+using GitHubRepoAdmin.Business.Contract;
 
-namespace EvoHub.SPA.Controllers
+namespace GitHubRepoAdmin.SPA.Controllers
 {
     [ApiController]
     [Route("[controller]")]

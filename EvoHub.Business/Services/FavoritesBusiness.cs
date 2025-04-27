@@ -1,10 +1,10 @@
-﻿using EvoHub.Domain.Interfaces;
-using EvoHub.Domain;
-using EvoHub.Infra.Contract;
-using EvoHub.Infra.CrossCutting;
-using EvoHub.Business.Contract;
+﻿using GitHubRepoAdmin.Domain.Interfaces;
+using GitHubRepoAdmin.Domain;
+using GitHubRepoAdmin.Infra.Contract;
+using GitHubRepoAdmin.Infra.CrossCutting;
+using GitHubRepoAdmin.Business.Contract;
 
-namespace EvoHub.Business.Services
+namespace GitHubRepoAdmin.Business.Services
 {
     public class FavoritesBusiness : IFavoritesBusiness
     {

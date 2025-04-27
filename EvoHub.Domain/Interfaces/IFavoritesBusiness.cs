@@ -1,6 +1,6 @@
-﻿using EvoHub.Domain;
+﻿using GitHubRepoAdmin.Domain;
 
-namespace EvoHub.Domain.Interfaces
+namespace GitHubRepoAdmin.Domain.Interfaces
 {
     public interface IFavoritesBusiness
     {

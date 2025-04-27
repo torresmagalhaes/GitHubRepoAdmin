@@ -11,17 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{95FAC758-6C3C-40A0-B2E9-F86968C0FC68}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvoHub.Domain", "EvoHub.Domain\EvoHub.Domain.csproj", "{4342C345-D437-4E6D-8DED-627793F5670F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubRepoAdmin.Domain", "EvoHub.Domain\GitHubRepoAdmin.Domain.csproj", "{4342C345-D437-4E6D-8DED-627793F5670F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvoHub.Infra", "EvoHub.Infra\EvoHub.Infra.csproj", "{E267CE7C-DF87-4814-9179-2912F3107DD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubRepoAdmin.Infra", "EvoHub.Infra\GitHubRepoAdmin.Infra.csproj", "{E267CE7C-DF87-4814-9179-2912F3107DD2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{68B10629-6F43-47D4-865F-12AF0B3E05D7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvoHub.Infra.CrossCutting", "EvoHub.Infra.CrossCutting\EvoHub.Infra.CrossCutting.csproj", "{C98F2865-1111-4A08-9F5A-1637808A41DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubRepoAdmin.Infra.CrossCutting", "EvoHub.Infra.CrossCutting\GitHubRepoAdmin.Infra.CrossCutting.csproj", "{C98F2865-1111-4A08-9F5A-1637808A41DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvoHub.Business", "EvoHub.Business\EvoHub.Business.csproj", "{3252D507-52EF-40D9-A2E4-6D18C82BB3F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubRepoAdmin.Business", "EvoHub.Business\GitHubRepoAdmin.Business.csproj", "{3252D507-52EF-40D9-A2E4-6D18C82BB3F8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvoHub.Tests", "EvoHub.UnitTests\EvoHub.Tests.csproj", "{902AB304-858F-4410-8D5C-B56A754B251A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHubRepoAdmin.Tests", "EvoHub.UnitTests\GitHubRepoAdmin.Tests.csproj", "{902AB304-858F-4410-8D5C-B56A754B251A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EvoHub.SPA", "EvoHub.SPA\EvoHub.SPA.csproj", "{2BE204B5-BC1F-4C84-A152-84529B83BA6F}"
 EndProject

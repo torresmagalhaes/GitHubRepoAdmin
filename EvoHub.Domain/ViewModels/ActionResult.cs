@@ -1,4 +1,4 @@
-﻿namespace EvoHub.Domain
+﻿namespace GitHubRepoAdmin.Domain
 {
     public class ActionResult<TModel> where TModel: class, new()
     {

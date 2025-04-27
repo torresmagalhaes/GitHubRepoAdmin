@@ -1,7 +1,7 @@
-﻿using EvoHub.Domain;
+﻿using GitHubRepoAdmin.Domain;
 using Microsoft.EntityFrameworkCore;
 
-namespace EvoHub.Infra.Database
+namespace GitHubRepoAdmin.Infra.Database
 {
     public class DatabaseContext : DbContext
     {

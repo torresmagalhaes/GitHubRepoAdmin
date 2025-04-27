@@ -1,9 +1,9 @@
-﻿using EvoHub.Domain;
-using EvoHub.Infra.Contract;
-using EvoHub.Infra.Database;
+﻿using GitHubRepoAdmin.Domain;
+using GitHubRepoAdmin.Infra.Contract;
+using GitHubRepoAdmin.Infra.Database;
 using Microsoft.EntityFrameworkCore;
 
-namespace EvoHub.Infra.Repository
+namespace GitHubRepoAdmin.Infra.Repository
 {
     public class FavoritesRepository : IFavoritesRepository
     {

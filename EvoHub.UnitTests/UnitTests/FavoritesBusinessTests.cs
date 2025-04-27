@@ -1,8 +1,8 @@
-using EvoHub.Business.Contract;
-using EvoHub.Business.Services;
-using EvoHub.Domain;
-using EvoHub.Infra.Contract;
-using EvoHub.Infra.CrossCutting;
+using GitHubRepoAdmin.Business.Contract;
+using GitHubRepoAdmin.Business.Services;
+using GitHubRepoAdmin.Domain;
+using GitHubRepoAdmin.Infra.Contract;
+using GitHubRepoAdmin.Infra.CrossCutting;
 using Moq;
 using System;
 using System.Collections.Generic;

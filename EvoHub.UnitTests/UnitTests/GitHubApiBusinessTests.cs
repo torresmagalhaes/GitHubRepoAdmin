@@ -1,7 +1,7 @@
-using EvoHub.Business.Services;
-using EvoHub.Domain;
-using EvoHub.Domain.Interfaces;
-using EvoHub.Infra.CrossCutting;
+using GitHubRepoAdmin.Business.Services;
+using GitHubRepoAdmin.Domain;
+using GitHubRepoAdmin.Domain.Interfaces;
+using GitHubRepoAdmin.Infra.CrossCutting;
 using Moq;
 using System.Collections.Generic;
 using System.Linq;

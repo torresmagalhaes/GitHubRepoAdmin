@@ -1,10 +1,10 @@
-﻿using EvoHub.Domain;
-using EvoHub.Domain.Interfaces;
-using EvoHub.Infra.CrossCutting;
+﻿using GitHubRepoAdmin.Domain;
+using GitHubRepoAdmin.Domain.Interfaces;
+using GitHubRepoAdmin.Infra.CrossCutting;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
-namespace EvoHub.Infra.ApiGitHub
+namespace GitHubRepoAdmin.Infra.ApiGitHub
 {
     public class GitHubApi : IGitHubApi
     {

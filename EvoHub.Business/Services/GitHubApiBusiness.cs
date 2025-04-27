@@ -1,9 +1,9 @@
-﻿using EvoHub.Business.Contract;
-using EvoHub.Domain;
-using EvoHub.Domain.Interfaces;
-using EvoHub.Infra.CrossCutting;
+﻿using GitHubRepoAdmin.Business.Contract;
+using GitHubRepoAdmin.Domain;
+using GitHubRepoAdmin.Domain.Interfaces;
+using GitHubRepoAdmin.Infra.CrossCutting;
 
-namespace EvoHub.Business.Services
+namespace GitHubRepoAdmin.Business.Services
 {
     public class GitHubApiBusiness : IGitHubApiBusiness
     {

@@ -1,6 +1,6 @@
-﻿using EvoHub.Domain;
+﻿using GitHubRepoAdmin.Domain;
 
-namespace EvoHub.Business.Contract
+namespace GitHubRepoAdmin.Business.Contract
 {
     public interface IGitHubApiBusiness
     {
