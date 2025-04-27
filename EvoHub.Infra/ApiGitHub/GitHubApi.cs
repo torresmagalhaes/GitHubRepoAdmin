@@ -1,61 +1,97 @@
-﻿using EvoHub.Domain.Interfaces;
-using EvoHub.Domain;
-using Newtonsoft.Json;
-using RestSharp;
+﻿using EvoHub.Domain;
+using EvoHub.Domain.Interfaces;
 using EvoHub.Infra.CrossCutting;
+using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 
 namespace EvoHub.Infra.ApiGitHub
 {
     public class GitHubApi : IGitHubApi
     {
-        private readonly RestClient _client;
-        private string _url = "https://api.github.com"; 
+        private readonly HttpClient _httpClient;
+        private readonly string _baseUrl;
 
-        public GitHubApi(RestClient client)
+        public GitHubApi(HttpClient httpClient, IConfiguration configuration)
         {
-            _client = client;
+            _httpClient = httpClient;
+            _baseUrl = configuration["GitHubApi:BaseUrl"] ?? "https://api.github.com";
         }
 
-        private async Task<ActionResult<TModel>> FetchFromGitHubApi<TModel>(string url, string errorMessage) where TModel : class, new()
+        private async Task<ActionResult<TModel>> FetchFromGitHubApi<TModel>(string endpoint, string errorMessage) where TModel : class, new()
         {
-            var request = new RestRequest(url, Method.Get).AddHeader("User-Agent", "EvoHub");
-
-            var response = await _client.ExecuteAsync(request);
-
-            if (!response.IsSuccessful || string.IsNullOrEmpty(response.Content))
+            try
             {
-                return new ActionResult<TModel>()
+                var request = new HttpRequestMessage(HttpMethod.Get, $"{_baseUrl}{endpoint}");
+                request.Headers.Add("User-Agent", "EvoHub");
+
+                var response = await _httpClient.SendAsync(request);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    return new ActionResult<TModel>
+                    {
+                        IsValid = false,
+                        Message = errorMessage,
+                        Result = new TModel()
+                    };
+                }
+
+                var content = await response.Content.ReadAsStringAsync();
+                var result = JsonConvert.DeserializeObject<TModel>(content) ?? new TModel();
+
+                return new ActionResult<TModel>
+                {
+                    IsValid = true,
+                    Message = Constants.SucessRepositoriesRetrieved,
+                    Result = result
+                };
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (use a logging library like Serilog or NLog)
+                return new ActionResult<TModel>
                 {
                     IsValid = false,
-                    Message = errorMessage,
+                    Message = $"An error occurred: {ex.Message}",
                     Result = new TModel()
                 };
             }
-
-            TModel result = JsonConvert.DeserializeObject<TModel>(response.Content) ?? new TModel();
-
-            return new ActionResult<TModel>()
-            {
-                IsValid = true,
-                Message = Constants.SucessRepositoriesRetrieved,
-                Result = result
-            };
         }
 
-        public async Task<ActionResult<List<GitHubRepository>>> GetRepository(string owner)
+        public async Task<ActionResult<List<GitHubRepository>>> GetRepositoriesByOwner(string owner)
         {
-            string url = $"{_url}/users/{owner}/repos";
+            if (string.IsNullOrWhiteSpace(owner))
+            {
+                return new ActionResult<List<GitHubRepository>>
+                {
+                    IsValid = false,
+                    Message = "Owner cannot be null or empty.",
+                    Result = new List<GitHubRepository>()
+                };
+            }
+
+            string endpoint = $"/users/{owner}/repos";
             string errorMessage = Constants.ErrorCouldntRetrieveUserRepositories;
 
-            return await FetchFromGitHubApi<List<GitHubRepository>>(url, errorMessage);
+            return await FetchFromGitHubApi<List<GitHubRepository>>(endpoint, errorMessage);
         }
 
         public async Task<ActionResult<RepositoryModel>> GetRepositoriesByName(string name)
         {
-            string url = $"{_url}/search/repositories?q={name}";
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                return new ActionResult<RepositoryModel>
+                {
+                    IsValid = false,
+                    Message = "Repository name cannot be null or empty.",
+                    Result = new RepositoryModel()
+                };
+            }
+
+            string endpoint = $"/search/repositories?q={name}";
             string errorMessage = Constants.ErrorCouldntRetrieveRepositoriesRelatedToName;
 
-            return await FetchFromGitHubApi<RepositoryModel>(url, errorMessage);
+            return await FetchFromGitHubApi<RepositoryModel>(endpoint, errorMessage);
         }
     }
 }

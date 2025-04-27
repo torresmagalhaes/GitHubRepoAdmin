@@ -18,7 +18,7 @@ namespace EvoHub.Business.Services
         {
             var result = new ActionResult<List<GitHubRepositoryViewModel>>();
 
-            var apiResult = await _gitHubApi.GetRepository(Constants.DefaultOwner);
+            var apiResult = await _gitHubApi.GetRepositoriesByOwner(Constants.DefaultOwner);
 
             if (!apiResult.IsValid)
             {
@@ -50,7 +50,7 @@ namespace EvoHub.Business.Services
         {
             var result = new ActionResult<GitHubRepositoryViewModel>();
 
-            var apiResult = await _gitHubApi.GetRepository(owner);
+            var apiResult = await _gitHubApi.GetRepositoriesByOwner(owner);
 
             if (!apiResult.IsValid)
             {

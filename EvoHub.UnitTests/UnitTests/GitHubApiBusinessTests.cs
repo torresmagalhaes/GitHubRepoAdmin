@@ -35,7 +35,7 @@ namespace UnitTests
                 Id = repo.Id,
                 Name = repo.Name
             }).ToList();
-            _gitHubApiMock.Setup(api => api.GetRepository(Constants.DefaultOwner))
+            _gitHubApiMock.Setup(api => api.GetRepositoriesByOwner(Constants.DefaultOwner))
                           .ReturnsAsync(new ActionResult<List<GitHubRepository>> { IsValid = true, Result = repositories });
 
             // Act
@@ -51,7 +51,7 @@ namespace UnitTests
         {
             // Arrange
             const string errorMessage = "Invalid owner";
-            _gitHubApiMock.Setup(api => api.GetRepository(Constants.DefaultOwner))
+            _gitHubApiMock.Setup(api => api.GetRepositoriesByOwner(Constants.DefaultOwner))
                           .ReturnsAsync(new ActionResult<List<GitHubRepository>> { IsValid = false, Message = errorMessage });
 
             // Act
@@ -75,7 +75,7 @@ namespace UnitTests
                 new GitHubRepository { Id = 2, Name = "Repo2" }
             };
             var expectedResult = new GitHubRepositoryViewModel { Id = 1, Name = "Repo1" };
-            _gitHubApiMock.Setup(api => api.GetRepository(owner))
+            _gitHubApiMock.Setup(api => api.GetRepositoriesByOwner(owner))
                           .ReturnsAsync(new ActionResult<List<GitHubRepository>> { IsValid = true, Result = repositories });
 
             // Act
@@ -98,7 +98,7 @@ namespace UnitTests
                 new GitHubRepository { Id = 1, Name = "Repo1" },
                 new GitHubRepository { Id = 2, Name = "Repo2" }
             };
-            _gitHubApiMock.Setup(api => api.GetRepository(owner))
+            _gitHubApiMock.Setup(api => api.GetRepositoriesByOwner(owner))
                           .ReturnsAsync(new ActionResult<List<GitHubRepository>> { IsValid = true, Result = repositories });
 
             // Act
@@ -117,7 +117,7 @@ namespace UnitTests
             const string owner = "InvalidOwner";
             const long repoId = 1;
             const string errorMessage = "Invalid owner";
-            _gitHubApiMock.Setup(api => api.GetRepository(owner))
+            _gitHubApiMock.Setup(api => api.GetRepositoriesByOwner(owner))
                           .ReturnsAsync(new ActionResult<List<GitHubRepository>> { IsValid = false, Message = errorMessage });
 
             // Act
