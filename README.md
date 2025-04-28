@@ -5,6 +5,13 @@ It integrates with the GitHub API to fetch and display information about GitHub 
 
 It was very fun to build and I could put a lot of concepts in practice. Hope you like it! 😊
 
+##Important
+By default, ASP.NET Core projects may attempt to use HTTPS (https://localhost:7019).
+It is possible to generate development SSL certificates and configure HTTPS properly, but it can be a bit more complex (especially when sharing the project or setting up in multiple environments).
+
+Since this is a demonstration project, we prefer to keep it simple and use only HTTP.
+After starting the application, please replace the URL https://localhost:7019 with http://localhost:5019 manually in your browser.
+
 ## Requirements
 
 - "My repository" screen with my github account repositories information ✅
